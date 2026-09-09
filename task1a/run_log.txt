@@ -1,0 +1,63 @@
+Tagged rows 76 | Tagged Value sum 1,479,670 | Day-1 Net Assets 1,589,670
+Register rows 232 (1 synthetic Day-1 + 231 priced)
+Sunday-dated trades in window: 11 on [datetime.date(2026, 2, 1)]
+Trades rolled to next register row: 11 (dates [datetime.date(2026, 2, 1)] -> [datetime.date(2026, 2, 2)])
+NSE-calendar audit: 245 weekdays in window, 231 priced rows, 14 weekdays absent (all NSE holidays): ['2025-10-02', '2025-10-22', '2025-11-05', '2025-12-25', '2026-01-15', '2026-01-26', '2026-03-03', '2026-03-26', '2026-03-31', '2026-04-03', '2026-04-14', '2026-05-01', '2026-05-28', '2026-06-26']
+
+EXCLUDED-TRADE COUNTS
+ Action  Buy  Sell
+Stock            
+ICIBAN    0     1
+VARBEV    0     2
+HERHON    0     1
+MAHMAH    0     1
+NATSEC    0     1
+SKYAIR    0     0
+
+FIRST 10 ROWS
+       Date  Opening_Cash_Balance  Cost_Value_of_Holdings  Market_Value_of_Holdings  Gain_Loss_Unrealised  Buy_Trade_Value  Sell_Trade_Value  Trade_Cash_Flow_Impact  Gain_Loss_Realised_Cumulative  Closing_Cash_Balance  Net_Assets  Rebased_NAV Unpriced_Symbols  Unpriced_Cost_Basis
+2025-09-21             110000.00              1479670.00                1479670.00                  0.00             0.00              0.00                    0.00                           0.00             110000.00  1589670.00       100.00                                  0.00
+2025-09-22             110000.00              1426333.51                1420737.80              -5595.71         32426.01          83908.03                51482.02                       -1854.47             161482.02  1582219.82        99.53                                  0.00
+2025-09-23             161482.02              1455978.04                1450769.80              -5208.24         29644.54              0.00               -29644.54                       -1854.47             131837.48  1582607.28        99.56                                  0.00
+2025-09-24             131837.48              1455978.04                1436809.65             -19168.39             0.00              0.00                    0.00                       -1854.47             131837.48  1568647.13        98.68         BUILDPRO              4979.84
+2025-09-25             131837.48              1455978.04                1427181.10             -28796.94             0.00              0.00                    0.00                       -1854.47             131837.48  1559018.58        98.07         BUILDPRO              4979.84
+2025-09-26             131837.48              1120775.04                1082283.10             -38491.94             0.00         313978.74               313978.74                      -23078.74             445816.22  1528099.32        96.13         BUILDPRO              4979.84
+2025-09-29             445816.22              1127260.14                1100280.15             -26979.99         57093.10          45465.12               -11627.98                      -28221.62             434188.24  1534468.39        96.53         BUILDPRO              4979.84
+2025-09-30             434188.24              1097715.93                1066163.40             -31552.53         45621.92          75312.38                29690.46                      -28075.37             463878.70  1530042.10        96.25         BUILDPRO              4979.84
+2025-10-01             463878.70              1097715.93                1083508.04             -14207.89             0.00              0.00                    0.00                      -28075.37             463878.70  1547386.74        97.34         BUILDPRO              4979.84
+2025-10-03             463878.70              1157362.70                1150185.45              -7177.25         79310.77          27897.91               -51412.86                      -19841.46             412465.84  1562651.29        98.30         BUILDPRO              4979.84
+
+LAST 3 ROWS
+       Date  Opening_Cash_Balance  Cost_Value_of_Holdings  Market_Value_of_Holdings  Gain_Loss_Unrealised  Buy_Trade_Value  Sell_Trade_Value  Trade_Cash_Flow_Impact  Gain_Loss_Realised_Cumulative  Closing_Cash_Balance  Net_Assets  Rebased_NAV Unpriced_Symbols  Unpriced_Cost_Basis
+2026-08-26            -102181.08              1913694.78                1964919.90              51225.12        272910.77          77274.54              -195636.24                       26207.46            -297817.32  1667102.58       104.87         BUILDPRO              4979.84
+2026-08-27            -297817.32              1920061.17                1962352.50              42291.33        104173.02         102094.62                -2078.40                       30495.46            -299895.71  1662456.79       104.58         BUILDPRO              4979.84
+2026-08-28            -299895.71              1979294.44                2038748.15              59453.71        235071.70         171987.39               -63084.31                       26644.42            -362980.02  1675768.13       105.42         BUILDPRO              4979.84
+
+Cash-chain max break: 0.0
+
+UNPRICED-HELD SUMMARY (cost retained, excluded from Market Value)
+  BUILDPRO: 229 days, 2025-09-24..2026-08-28, cost basis carried approx Rs 4,979.84, max 1.095% of Net Assets
+  DECGOL: 23 days, 2026-02-03..2026-03-06, cost basis carried approx Rs 18,552.22, max 1.232% of Net Assets
+
+FLAGS (deduplicated):
+  [229x] UNPRICED-HELD: BUILDPRO
+  [23x] UNPRICED-HELD: DECGOL
+
+Open positions at 2026-08-28: 48
+
+QTY RECONCILIATION: 55 symbols, 1 mismatch(es)
+        computed_2026_08_28  post_cutoff_net  projected_2026_09_05  broker_2026_09_05  diff
+ONTECH                  0.0              0.0                   0.0               75.0 -75.0
+
+================ SUMMARY (TASK 1a) ================
+UNLEVERED VIEW - actual MTF financing costs (~9.49% p.a. + pledge charges) are
+EXCLUDED and will reduce real profit when Task 1b is run.
+Day-1 Net Assets 2025-09-21 ......... Rs 1,589,670.00  (index 100.00)
+Latest Net Assets 2026-08-28 ...... Rs 1,675,768.13
+Change .............................. Rs 86,098.13  (+5.42%)
+Realised gain (cumulative) .......... Rs 26,644.42
+Unrealised gain (latest snapshot) ... Rs 59,453.71
+Rebased NAV index ................... 105.42
+Closing cash (negative = MTF debit) . Rs -362,980.02
+UNLEVERED VIEW - MTF financing cost excluded; real profit is lower.
+===================================================
