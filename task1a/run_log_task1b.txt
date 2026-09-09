@@ -1,0 +1,52 @@
+Ledger: 2026-04-27 .. 2026-07-10, 75 rows, final balance Rs 618,861.69
+Register days on/after era start with no ledger row: 35 (2026-07-13 .. 2026-08-28)
+GATE1 anchor re-check: PASS (max |delta| 0.0000)
+
+CONVERSION CROSS-CHECK (20 events)
+      Date  Stock  Qty   Amount                                                            Check
+2026-04-16 NATMIN  200 17520.00 PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-16 ADAPOW   50  9426.00 PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-16 NEYLIG   50 15117.50 PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-16 POWFIN   65 30127.50 PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-16 SYRTEC   30 28537.50 PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-16 ATHENE   20 17493.00 PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-22 DATPAT    6 22012.80 PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-23 KRNHEA   20 24892.00 PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-23  LUPIN    5 11810.00 PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-23 GLEPHA    4  9288.80 PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-24 ADIAMC   10 10600.00 PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-24 TDPSYS   15 16356.75 PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-24 NEYLIG   35 10615.50 PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-28 OILIND   40 19662.00                         MATCHED repay Rs 121,635.97 within +/-3d
+2026-04-28 ASHMIN   30 19523.60                         MATCHED repay Rs 121,635.97 within +/-3d
+2026-05-26  AVATE    6  8507.40                         MATCHED repay Rs 496,015.74 within +/-3d
+2026-05-26   BHEL   60 24552.00                         MATCHED repay Rs 496,015.74 within +/-3d
+2026-05-29 NETTEC    4 15850.60                         MATCHED repay Rs 616,771.66 within +/-3d
+2026-06-01 KNOMAR   15 30513.00                         MATCHED repay Rs 845,089.45 within +/-3d
+2026-06-19 ASHMIN   30 21450.00                         MATCHED repay Rs 898,259.84 within +/-3d
+
+Residual cash after adding loan back, from era start: min Rs -413,792.82, max Rs 1,224,597.81  (near-zero/positive = the negative-cash artifact was exactly the loan)
+
+================ SUMMARY (TASK 1b - MTF-AWARE) ================
+Financing basis: SOF-BILLED (advisory accrual deflated by 0.8582; advisory runs +16.53% high,
+demoted per the ledger's own README). INTEREST ONLY - pledge charges were not supplied.
+Day-1 Net Assets 2025-09-21 ............ Rs 1,589,670.00  (index 100.00)
+Latest 2026-08-28 Net Assets (MTF) .. Rs 1,666,042.21
+Latest NAV index (MTF) ................. 104.80
+Financing cost, cumulative (SOF basis) . Rs 9,725.92
+Financing cost, advisory basis ......... Rs 11,333.54
+MTF Loan Balance at cutoff ............. Rs 618,861.69 [CARRY-FORWARD(unverified)]
+Closing cash, MTF-aware ................ Rs 255,881.67
+--- vs TASK 1a (unlevered benchmark) ---
+Task 1a Net Assets ..................... Rs 1,675,768.13  (NAV 105.42, +5.42%)
+Task 1b Net Assets ..................... Rs 1,666,042.21  (NAV 104.80)
+Difference ............................. Rs -9,725.92 (= financing cost)
+Zero-fill variant (post-ledger loan=0) . Net Assets Rs 1,666,042.21 - IDENTICAL, because the loan
+  cancels out of Net Assets under this formulation; the gap affects only the Loan Balance and Closing
+  Cash columns as displayed, not the NAV.
+===============================================================
+
+FLAGS:
+ - HARD STOP: 35 register days on/after the MTF era start have NO loan-ledger row (2026-07-13..2026-08-28); ledger ends 2026-07-10 with a non-zero balance of Rs 618,861.69. Zero-filling would assert the loan was repaid, which the ledger does not say. Primary series CARRIES FORWARD the last known balance, flagged CARRY-FORWARD(unverified); the zero-fill variant is quantified in the summary.
+ - PLEDGE CHARGES NOT SUPPLIED: the README's financing rule is 'SOF-billed interest + pledge'. Only the interest leg (Rs 4,321.62 to 2026-06-19) is in the supplied files. Financing cost below is interest-only and is therefore a FLOOR, not the full charge.
+ - SETTLEMENT-BASIS MISMATCH (finding, not a stop): residual cash (Task-1a cash + ledger loan) over the 52 ledger-covered days runs min Rs -413,793 / median Rs 22,495 / max Rs 824,666, negative on 23 of them. The register books trades on TRADE date; the ledger draws/repays on SETTLEMENT (T+1) basis, and 30 of 75 ledger days are INTERPOLATED between weekly SOF anchors. Net Assets is unaffected (the loan cancels), but the Closing Cash / Loan Balance split on any single day is approximate.

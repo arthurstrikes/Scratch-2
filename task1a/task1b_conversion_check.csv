@@ -1,0 +1,21 @@
+Date,Stock,Qty,Amount,Check
+2026-04-16,NATMIN,200,17520.0,PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-16,ADAPOW,50,9426.0,PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-16,NEYLIG,50,15117.5,PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-16,POWFIN,65,30127.5,PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-16,SYRTEC,30,28537.5,PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-16,ATHENE,20,17493.0,PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-22,DATPAT,6,22012.8,PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-23,KRNHEA,20,24892.0,PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-23,LUPIN,5,11810.0,PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-23,GLEPHA,4,9288.8,PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-24,ADIAMC,10,10600.0,PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-24,TDPSYS,15,16356.75,PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-24,NEYLIG,35,10615.5,PRE-LEDGER (before 2026-04-27 era start; no repay row can exist)
+2026-04-28,OILIND,40,19662.0,"MATCHED repay Rs 121,635.97 within +/-3d"
+2026-04-28,ASHMIN,30,19523.6,"MATCHED repay Rs 121,635.97 within +/-3d"
+2026-05-26,AVATE,6,8507.4,"MATCHED repay Rs 496,015.74 within +/-3d"
+2026-05-26,BHEL,60,24552.0,"MATCHED repay Rs 496,015.74 within +/-3d"
+2026-05-29,NETTEC,4,15850.6,"MATCHED repay Rs 616,771.66 within +/-3d"
+2026-06-01,KNOMAR,15,30513.0,"MATCHED repay Rs 845,089.45 within +/-3d"
+2026-06-19,ASHMIN,30,21450.0,"MATCHED repay Rs 898,259.84 within +/-3d"
