@@ -1,0 +1,24 @@
+Day-1 2025-09-21: units 15,896.700000 (Manas 14,796.70 + Mukesh 1,100.00) | NAV 100.0000
+
+date        who            amountkind             npre  units minted   total units
+2025-09-26  Manas        8,712.23cash          96.1268     90.632695  15987.332695
+2025-10-09  Manas       17,684.84cash          99.3857    177.941399  16165.274094
+2025-12-30  Mukesh      30,000.00cash          97.4467    307.860527  16473.134621
+2025-12-30  Nilesh      30,000.00cash          97.4467    307.860527  16780.995149
+2026-01-21  Manas       71,991.25cash          94.1515    764.632025  17545.627174
+2026-04-08  Manas        6,313.37cash          93.2508     67.703122  17613.330296
+2026-06-22  Manas       18,451.51mintonly     104.6613    176.297407  17789.627703
+2026-07-05  PAIR        30,000.00transfer     100.2199+299.341693 Nilesh / -299.341693 Manas  17789.627703 (NAV ffill from 2026-07-03)
+
+=== 2026-08-30 (register NA from 2026-08-28; 08-29/30 are Sat/Sun, no trading) ===
+register Net Assets 1,643,791.84 (08-28 less weekend financing 383.28) + injected cash 164,701.69 = 1,808,493.53
+units 17,789.627703 | NAV 101.6600
+
+Contributor           units     own%           value  blended entry   return
+Manas          15774.564955   88.673    1,603,642.26        99.7063   +1.96%
+Mukesh          1407.860527    7.914      143,123.10        99.4417   +2.23%
+Nilesh           607.202220    3.413       61,728.18        98.8139   +2.88%
+TOTAL          17789.627703  100.000    1,808,493.53
+
+VALIDATION units x NAV = 1,808,493.53 vs Net Assets 1,808,493.53 | delta +0.000000
+contributed capital: Manas 1,572,823.20 + Mukesh 140,000.00 + Nilesh 60,000.00 = 1,772,823.20

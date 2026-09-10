@@ -33,8 +33,17 @@ um, uk, un = MANAS_D1/100.0, MUKESH_D1/100.0, 0.0
 cum_cash = 0.0
 manas_cost, mukesh_cost, nilesh_cost = MANAS_D1, MUKESH_D1, 0.0
 
+# NATSEC 2025-10-09: 15 sh, Rs17,718.00 gross - Rs33.1621 charges. Reclassified
+# from ordinary trading flow to a capital injection, matching this project's
+# established pattern for the 4 untagged names (verified 3/3 against INJECTIONS:
+# 2025-09-26 Rs8,712.2333, 2026-01-21 Rs71,991.2538, 2026-04-08 Rs6,313.3695 all
+# equal that date's net sale proceeds exactly).
+# SKYAIR: only 2 trades in the entire tradebook, a same-day buy+sell round trip on
+# 2026-09-03 - after this cutoff, and not a pre-existing-holding liquidation.
+# No SKYAIR injection to add.
 EVENTS = [
     ('2025-09-26', 'Manas',   8_712.2333, 'cash'),
+    ('2025-10-09', 'Manas',  17_684.8379, 'cash'),
     ('2025-12-30', 'Mukesh', 30_000.00,   'cash'),
     ('2025-12-30', 'Nilesh', 30_000.00,   'cash'),
     ('2026-01-21', 'Manas',  71_991.2538, 'cash'),
