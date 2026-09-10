@@ -116,9 +116,29 @@ NA_r = V_end + cash_end - loan_end_r - fin_end_r; NAV_r = NA_r/base_units
 print(f"\n--- alternative: corrected loan level ({loan_new(BASE):,.2f} at 07-10 vs engine's {base_loan_engine:,.2f}) ---")
 print(f"Net Assets {NA_r:,.2f} | NAV {NAV_r:.4f}  (restatement effect {NAV_r-NAV_end:+.4f})")
 
-print(f"\n--- per-contributor at 2026-08-30 (continuity basis) ---")
+# ============================================================
+# CANONICAL per Mannu's ruling: SOF-CORRECTED loan basis, not engine continuity.
+# The engine's Rs618,861.69 at 2026-07-10 was a flat-carried provisional value
+# already superseded by SOF-exact data; carrying it forward preserves a known
+# defect. loan_new()/fin_new() read MTF_Loan_Ledger_extended.xlsx directly.
+# ============================================================
+print(f"\n=== CANONICAL: whole-account EQUITY v2, NATSEC included, "
+      f"SOF-corrected loan basis, 2026-08-30 ===")
+print(f"V_stocks {V_end:,.2f} | cash {cash_end:,.2f} | loan {loan_end_r:,.2f} | fin {fin_end_r:,.2f}")
+print(f"Net Assets {NA_r:,.2f} | units {base_units:,.6f} | NAV {NAV_r:.4f}")
 tot = MANAS+MUKESH+NILESH
+print(f"\n{'Contributor':12s}{'units':>15}{'own%':>9}{'value':>16}{'entryNAV':>11}{'return':>9}")
 for nm,u,entry in [('Manas',MANAS,99.7181),('Mukesh',MUKESH,99.4246),('Nilesh',NILESH,97.3701)]:
-    print(f"{nm:7s} units {u:12.6f} | own% {u/tot*100:6.3f} | value {u*NAV_end:13,.2f} "
-          f"| entryNAV {entry:8.4f} | return {(NAV_end/entry-1)*100:+6.2f}%")
-print(f"{'TOTAL':7s} units {tot:12.6f} | own% 100.000 | value {tot*NAV_end:13,.2f}")
+    print(f"{nm:12s}{u:>15.6f}{u/tot*100:>9.3f}{u*NAV_r:>16,.2f}{entry:>11.4f}{(NAV_r/entry-1)*100:>+8.2f}%")
+print(f"{'TOTAL':12s}{tot:>15.6f}{100.0:>9.3f}{tot*NAV_r:>16,.2f}")
+
+print("\n--- superseded (engine-continuity basis, for the record) ---")
+print(f"Net Assets {NA_end:,.2f} | NAV {NAV_end:.4f}")
+
+print("""
+OPEN ITEM (logged, not blocking this table):
+  2026-06-22 'mint-only' Rs18,451.51 to Manas - managed_account_colab.py line 294,
+  hardcoded as ("Manas",18451.51,"mintonly"), commented 'true-cash, units only'.
+  No bank record supplied in any session to date. FAILS S5.5 Check 3. It predates
+  this extension and sits inside the inherited 2026-07-10 baseline, so it
+  propagates into every figure above. Flagged for a future dispatch.""")

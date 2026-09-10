@@ -1,0 +1,36 @@
+Engine's own V_stocks at 2026-07-10 : 2,166,470.15
+This reconstruction at 2026-07-10   : 2,150,874.15
+delta                               : -15,596.00
+
+Held-but-unpriceable symbols at 07-10 (1): BUILDPROx8
+
+4-name (Manas-injection) sales in window: 0  -> no new injections
+
+window deltas: flow 167,088.77 | dloan -29,995.44 | dfin 10,476.78
+
+--- 2026-08-30, continuity basis ---
+V_stocks 2,038,748.15 | cash 390,587.93 | loan 588,866.25 | fin 25,743.40
+Net Assets 1,814,726.43 | units 17,803.574958 | NAV 101.9305
+
+--- alternative: corrected loan level (427,360.86 at 07-10 vs engine's 618,861.69) ---
+Net Assets 1,999,994.37 | NAV 112.3367  (restatement effect +10.4062)
+
+=== CANONICAL: whole-account EQUITY v2, NATSEC included, SOF-corrected loan basis, 2026-08-30 ===
+V_stocks 2,038,748.15 | cash 390,587.93 | loan 397,365.42 | fin 31,976.29
+Net Assets 1,999,994.37 | units 17,803.574958 | NAV 112.3367
+
+Contributor           units     own%           value   entryNAV   return
+Manas          15788.415048   88.681    1,773,618.01    99.7181  +12.65%
+Mukesh          1408.100000    7.909      158,181.27    99.4246  +12.99%
+Nilesh           607.054952    3.410       68,194.53    97.3701  +15.37%
+TOTAL          17803.570000  100.000    1,999,993.81
+
+--- superseded (engine-continuity basis, for the record) ---
+Net Assets 1,814,726.43 | NAV 101.9305
+
+OPEN ITEM (logged, not blocking this table):
+  2026-06-22 'mint-only' Rs18,451.51 to Manas - managed_account_colab.py line 294,
+  hardcoded as ("Manas",18451.51,"mintonly"), commented 'true-cash, units only'.
+  No bank record supplied in any session to date. FAILS S5.5 Check 3. It predates
+  this extension and sits inside the inherited 2026-07-10 baseline, so it
+  propagates into every figure above. Flagged for a future dispatch.
