@@ -1,0 +1,16 @@
+daily NAV path: 232 days, 2025-09-21 -> 2026-08-28
+terminal check: path end 101.6505 (08-28) | closed 08-30 figure 101.66 (delta = weekend financing Rs383.28 / 17,789.63u = 0.0215)
+
+[1] TWRR daily-linked to 08-28: +1.6505%  | to closed 08-30 NAV: +1.6600%
+    method: daily geometric linking of unit-NAV returns. Unit accounting mints at
+    same-day NAV, so every capital event is NAV-neutral by construction -> no
+    flow distortion to remove; linked product equals the NAV ratio.
+
+[2] MWRR (XIRR, annualised): +3.3792%
+    TWRR annualised for comparison: +1.7674%  | gap +1.6118pp
+    gap sign: flows timed favourably (capital added before weak stretches drags MWRR below TWRR)
+
+[3] period TWRR (MA leg): SI +1.66% | CYTD +4.29% | FYTD +12.85%
+
+[8] ann. vol 14.75% | Sharpe -0.321 (Rf 6.50%, 364-day T-bill assumption)
+    max drawdown -10.37% on 2026-03-23 | Calmar 0.170
