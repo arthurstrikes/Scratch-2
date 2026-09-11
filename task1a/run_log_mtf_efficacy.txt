@@ -1,0 +1,39 @@
+MTF era 2026-04-27..2026-08-28 | trades 1686 (MTF-marked 909, CNC 777)
+conversion events in window: 7 of 20 | applied 7
+legs: closed 1084, open 120
+
+[2/3] CLOSED LEGS BY FUNDING (gross, before financing)
+basis                               n    win%    meanR     medR           P&L     MFE%     MAE%
+MTF, never converted              593   47.6%    0.145   -0.039     19,323.32     5.46    -3.00
+MTF -> converted to delivery        7   42.9%    0.569   -0.198        213.31    10.28    -4.36
+CNC (cash), same period           484   43.2%    0.197   -0.138      3,536.59     5.95    -3.79
+
+[5] FINANCING DRAG (allocated by MTF rupee-days; total Rs31,593.01 consumed, not recomputed)
+basis                               n     gross P&L   financing       net P&L  drag % of gross
+MTF, never converted              593     19,323.32   27,756.86     -8,433.54           143.6%
+MTF -> converted                    7        213.31      210.50          2.81            98.7%
+CNC (cash)                        484      3,536.59        0.00      3,536.59             0.0%
+ALL MTF-funded closed             600     19,536.63   27,967.36     -8,430.73           143.2%
+open MTF-funded legs carry a further Rs3,625.65 financing on Rs12,292.86 unrealised
+financing allocated to closed legs Rs27,967.36 + open Rs3,625.65 = Rs31,593.01 (ties to total)
+
+[4] MTF vs CNC - THE EFFICACY QUESTION (closed legs, net of financing)
+basis                               n    win%  meanR gross   meanR net       net P&L  net P&L/leg
+MTF-funded (incl. converted)      600   47.5%        0.150       0.098     -8,430.73       -14.05
+CNC (cash)                        484   43.2%        0.197       0.197      3,536.59         7.31
+
+[3] CONVERSION BEHAVIOUR - split-phase (n=7 in-window events, 13 pre-date the MTF era)
+  legs touched by conversion: 7 (closed 7, open 0)
+  MTF phase (entry->conversion) mean return +3.12%, median +1.88%, 5/7 in profit at conversion
+  CNC phase (conversion->exit/mark) mean +0.86%, median +3.27%
+  blended whole-trade mean R +0.569 | net of financing +0.533
+
+  per conversion leg:
+  sym         entry       conv        exit            MTF%    CNC%       R   R_net
+  NETTEC      2026-05-20  2026-05-29  2026-06-01     23.57    3.27   3.834   3.792
+  KNOMAR      2026-05-20  2026-06-01  2026-06-02    -14.91    3.77  -1.592  -1.648
+  BHEL        2026-05-20  2026-05-26  2026-06-03      1.88   -3.27  -0.198  -0.226
+  NETTEC      2026-05-20  2026-05-29  2026-06-03     23.57    0.27   3.406   3.364
+  BHEL        2026-05-20  2026-05-26  2026-06-03      1.88   -4.97  -0.441  -0.469
+  AVATE       2026-05-20  2026-05-26  2026-06-03      2.85    3.30   0.879   0.851
+  KNOMAR      2026-05-26  2026-06-01  2026-06-02    -16.99    3.68  -1.901  -1.930
