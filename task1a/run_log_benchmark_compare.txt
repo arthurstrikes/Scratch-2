@@ -1,0 +1,9 @@
+benchmark rows in MA window: 232 | 2025-09-22 -> 2026-08-28 | nulls 0
+
+         Period  MA_TWRR  Nifty50  MidSmall400  Alpha_N50  Alpha_MS400
+Since Inception     1.66    -4.07         7.41       5.73        -5.75
+           CYTD     4.29    -7.48         7.28      11.77        -2.99
+           FYTD    12.85     8.26        23.77       4.59       -10.92
+
+annualised (SI, 0.940y): MA +1.77% | N50 -4.33% | MS400 +7.90%
+annualised alpha: vs N50 +6.10pp | vs MS400 -6.14pp
