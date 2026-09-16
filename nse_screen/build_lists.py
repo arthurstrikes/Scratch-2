@@ -34,11 +34,11 @@ fno_syms = set()
 fno_fp = NSE / 'fo_secban.csv'
 if fno_fp.exists():
     with open(fno_fp, encoding='latin-1') as f:
-        txt = f.read()
-    # fo_mktlots.csv format varies; symbol usually 2nd column after a header block
-    for line in txt.splitlines():
+        lines = f.read().splitlines()
+    # format: UNDERLYING, SYMBOL, <month columns...> ; skip header row
+    for line in lines[1:]:
         parts = [p.strip().strip('"') for p in line.split(',')]
-        if len(parts) >= 2 and parts[1].isupper() and parts[1].isalnum() and len(parts[1]) > 1:
+        if len(parts) >= 2 and parts[1] and parts[1].isupper() and parts[1].isalnum():
             fno_syms.add(parts[1])
     print(f"F&O list loaded: {len(fno_syms)} symbols")
 else:
